@@ -74,6 +74,59 @@ button { font: inherit; cursor: pointer; }
 .field:last-child { border-right: 0; }
 .field input { border: 0; outline: 0; font: inherit; font-size: 18px; width: 100%; background: transparent; }
 .field-icon { font-size: 20px; }
+.autocomplete { position: relative; width: 100%; }
+.autocomplete input { border: 0; outline: 0; font: inherit; font-size: 18px; width: 100%; background: transparent; }
+.autocomplete-listbox {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.12);
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 10;
+}
+.autocomplete-option {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.autocomplete-option-active {
+  background: var(--red-soft);
+}
+.autocomplete-secondary {
+  font-size: 12px;
+  color: var(--muted);
+}
+.field-error {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--red);
+}
+.swap-btn {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 1;
+  margin: 0 -18px;
+}
 .date-field { flex: 2 1 360px; gap: 10px; }
 @media (min-width: 1100px) { .search-fields { flex-wrap: nowrap; } .date-field { flex: 0 0 auto; } }
 .date-text { display: grid; grid-template-columns: auto auto; column-gap: 12px; align-items: baseline; margin-right: auto; }
